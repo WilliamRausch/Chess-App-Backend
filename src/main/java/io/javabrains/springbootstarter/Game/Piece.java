@@ -19,8 +19,8 @@ public class Piece {
         this.xpos = xpos;
         this.ypos = ypos;
         this.color = color;
-        this.isActive = isActive;
         this.charSymbol = charSymbol;
+        this.isActive = isActive;
     }
 
     public Piece() {

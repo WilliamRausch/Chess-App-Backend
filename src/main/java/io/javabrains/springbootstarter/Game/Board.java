@@ -48,8 +48,8 @@ public class Board {
         super();
         this.spots = spots;
 
-        for(int i=0; i<=8; i++) {
-            for(int j=0; j<=8; j++) {
+        for(int i=0; i<8; i++) {
+            for(int j=0; j<8; j++) {
                 this.spots.add(new Space2(i,j,null));
             }
         }
