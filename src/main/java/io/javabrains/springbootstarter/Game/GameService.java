@@ -43,7 +43,7 @@ public class GameService {
         System.out.println("TESTING!"+game.getTest().getTest2());
         for(int i=0;i<8;i++) {
             game.getBoard().getspace(i, 1).setPiece(new Piece(i, 1, "black", "[P]", true));
-            game.getBoard().getspace(i, 6).setPiece(new Piece(i, 1, "white", "[p]", true));
+            game.getBoard().getspace(i, 6).setPiece(new Piece(i, 6, "white", "[p]", true));
         }
         //Rooks
         game.getBoard().getspace(0,0).setPiece(new Piece(0,0,"black","[R]",true));

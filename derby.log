@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Fri Mar 16 13:48:48 EDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0162-2fed-ad27-0000064c4a68 
+Wed Mar 28 13:00:56 EDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0162-6d8e-2b3e-000004b24338 
 on database directory memory:/Users/nolanrausch/IdeaProjects/ChessApp/ChessAPI/testdb with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
 Loaded from file:/Users/nolanrausch/.m2/repository/org/apache/derby/derby/10.13.1.1/derby-10.13.1.1.jar
 java.vendor=Oracle Corporation

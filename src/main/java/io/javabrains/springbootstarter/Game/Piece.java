@@ -12,6 +12,15 @@ public class Piece {
     int xpos;
     int ypos;
     String color;
+
+    public String getCharSymbol() {
+        return charSymbol;
+    }
+
+    public void setCharSymbol(String charSymbol) {
+        this.charSymbol = charSymbol;
+    }
+
     String charSymbol;
     boolean isActive;
 
