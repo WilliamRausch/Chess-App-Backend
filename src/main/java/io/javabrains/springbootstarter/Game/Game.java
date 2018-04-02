@@ -8,7 +8,8 @@ import javax.persistence.*;
 @Entity
 public class Game {
     @Id
-    private String id;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private int id;
 
     @ManyToOne
     private Player player1;
@@ -32,25 +33,16 @@ public class Game {
 
     private Board board;
 
-    public TestObj getTest() {
-        return test;
-    }
 
-    public void setTest(TestObj test) {
-        this.test = test;
-    }
-    @OneToOne(
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
-    )
-    private TestObj test;
+
+
 
     public Game() {
 
     }
 
-    public Game(String id, String player1Id, String player2Id, TestObj test, Board board) {
-        this.test=test;
+    public Game(int id, int player1Id, int player2Id,  Board board) {
+
         this.id = id;
         this.board = board;
 
@@ -72,11 +64,11 @@ public class Game {
     public void setPlayer2(Player player2) {
         this.player2 = player2;
     }
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

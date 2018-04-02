@@ -23,7 +23,7 @@ public class PlayerService {
         playerRepository.findAll().forEach(players::add);
         return players;
     }
-    public Player getPlayer(String id){
+    public Player getPlayer(int id){
        //return players.stream().filter(u -> u.getId().equals(id)).findFirst().get();
          return playerRepository.findOne(id);
     }
@@ -31,10 +31,10 @@ public class PlayerService {
         playerRepository.save(player);
 
     }
-    public void updatePlayer(Player player, String id){
+    public void updatePlayer(Player player, int id){
       playerRepository.save(player) ;
     }
-    public void deletePlayer(String id){
+    public void deletePlayer(int id){
         playerRepository.delete(id);
     }
 }

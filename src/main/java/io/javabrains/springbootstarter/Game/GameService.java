@@ -18,13 +18,13 @@ public class GameService {
 //                new Player("2", "joe"),
 //                new Player("3", "dan")
 //        ));
-    public List<Game> getAllGames(String playerId){
+    public List<Game> getAllGames(int playerId){
         List<Game> games = new ArrayList<>();
         gameRepository.findByplayer1Id(playerId).forEach(games::add);
         gameRepository.findByPlayer2Id(playerId).forEach(games::add);
         return games;
     }
-    public Game getGame(String id){
+    public Game getGame(int id){
         Game game = gameRepository.findOne(id);
         //System.out.println("hello");
 //        System.out.println("TESTING"+game.getTest().getTest2());
@@ -40,7 +40,7 @@ public class GameService {
         return gameRepository.findOne(id);
     }
     public void addGame(Game game){
-        System.out.println("TESTING!"+game.getTest().getTest2());
+
         for(int i=0;i<8;i++) {
             game.getBoard().getspace(i, 1).setPiece(new Piece(i, 1, "black", "[P]", true));
             game.getBoard().getspace(i, 6).setPiece(new Piece(i, 6, "white", "[p]", true));
@@ -76,7 +76,7 @@ public class GameService {
     public void updateGame(Game game){
         gameRepository.save(game) ;
     }
-    public void deleteGame(String id){
+    public void deleteGame(int id){
         gameRepository.delete(id);
     }
 

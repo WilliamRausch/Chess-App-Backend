@@ -65,7 +65,7 @@ public class Board {
 
     public Space2 getspace(int x, int y) {
         int numconvert = ((x*7)+x+y);
-        System.out.println(numconvert);
+        //System.out.println(numconvert);
         return spots.get(numconvert);
 
 
