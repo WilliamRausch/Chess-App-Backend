@@ -70,14 +70,14 @@ public class Piece {
     public void Pawnmove(int xpos, int ypos, Board board, Space2 selected) {
         Space2 current = board.getspace(xpos, ypos);
         if (selected.y == current.y + 1 && selected.x == current.x) {
-            this.setXpos(xpos);
-            this.setYpos(ypos);
+            this.setXpos(selected.x);
+            this.setYpos(selected.y);
             selected.occupySpot(this);
             current.piece = null;
         } else if ((selected.y == current.y + 1 && selected.x == current.x + 1 || selected.x == current.x - 1) && selected.isOccupied()) {
 
-            this.setXpos(xpos);
-            this.setXpos(ypos);
+            this.setXpos(selected.x);
+            this.setXpos(selected.y);
             selected.occupySpot(this);
             current.piece = null;
 

@@ -23,6 +23,7 @@ public class Space2{
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
+    @org.hibernate.annotations.ForeignKey(name = "none")
     Piece piece;
 
     public int getId() {
