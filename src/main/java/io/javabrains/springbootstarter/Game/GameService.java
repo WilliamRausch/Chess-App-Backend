@@ -91,33 +91,75 @@ public class GameService {
         int sxpos = Character.getNumericValue(scxpos);
         char scypos = selected.charAt(1);
         int sypos = Character.getNumericValue(scypos);
+
+
+        Piece piece = game.getBoard().getspace(xpos, ypos).getPiece();
+        Piece piece2 = new Piece(piece.getXpos(), piece.getYpos(), piece.getColor(), piece.getCharSymbol(), piece.isActive() );
+
         Space2 selectedSpace = game.getBoard().getspace(sxpos, sypos);
+
+//        game.getBoard().getspace(sxpos, sypos).setPiece(piece) ;
+//        game.getBoard().getspace(xpos, ypos).setPiece(null);
+//        game.getBoard().printboard();
+
+
+        if (game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[P]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[p]")) {
+            System.out.println("MOVING PAWN");
+            if(game.getBoard().getspace(xpos, ypos).piece.Pawnmove(xpos, ypos, game.getBoard(), selectedSpace)){
+                piece.setXpos(sxpos);
+                piece.setYpos(sypos) ;
+                game.getBoard().getspace(xpos,ypos) .setPiece(null);
+                game.getBoard().getspace(sxpos, sypos).setPiece(piece2) ;
+
+//               game.getBoard().getspace(xpos, ypos).getPiece().setActive(false) ;
+//                game.getBoard().getspace(xpos, ypos).getPiece().setCharSymbol("[ ]");
+//                game.getBoard().getspace(xpos, ypos).getPiece().setXpos(-1) ;
+//                game.getBoard().getspace(xpos, ypos).getPiece().setYpos(-1) ;
+                game.getBoard().printboard();
+                    gameRepository.save(game);
+
+            }
+
+////            //saving updated game
+           // gameRepository.save(game);
+        }
+
 
 
         //had to put every method in the parent class since making piece abstract or an interface wasn't working with jpa
 
+
+
         //System.out.println(game.getBoard().getspace(xpos, ypos).piece.charSymbol);
-        if (game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[P]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[p]")) {
-            game.getBoard().getspace(xpos, ypos).piece.Pawnmove(xpos, ypos, game.getBoard(), selectedSpace);
-            //saving updated game
-            gameRepository.save(game);
-        } else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[R]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[r]")) {
-            game.getBoard().getspace(xpos, ypos).piece.Rookmove(xpos, ypos, game.getBoard(), selectedSpace);
-        gameRepository.save(game);
-    }  else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[B]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[b]")) {
-        game.getBoard().getspace(xpos, ypos).piece.Bishopmove(xpos, ypos, game.getBoard(), selectedSpace);
-        gameRepository.save(game);
-    }else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[Q]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[q]")) {
-            game.getBoard().getspace(xpos, ypos).piece.Queenmove(xpos, ypos, game.getBoard(), selectedSpace);
-            gameRepository.save(game);
-        }else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[K]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[k]")) {
-            game.getBoard().getspace(xpos, ypos).piece.Kingmove(xpos, ypos, game.getBoard(), selectedSpace);
-            gameRepository.save(game);
-        }else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[N]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[n]")) {
-            game.getBoard().getspace(xpos, ypos).piece.Knightmove(xpos, ypos, game.getBoard(), selectedSpace);
-            gameRepository.save(game);
-        }else{
-                    System.out.println("Error");
-                }
-    }
+//        if (game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[P]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[p]")) {
+//            System.out.println("MOVING PAWN");
+//          if(game.getBoard().getspace(xpos, ypos).piece.Pawnmove(xpos, ypos, game.getBoard(), selectedSpace)){
+//              piece.setXpos(sxpos);
+//              piece.setYpos(sypos) ;
+//              game.getBoard().getspace(sxpos, sypos).setPiece(piece) ;
+//              game.getBoard().getspace(xpos, ypos).setPiece(null);
+//              game.getBoard().printboard();
+//
+//          }
+//////            //saving updated game
+//            gameRepository.save(game);
+//        } else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[R]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[r]")) {
+//            game.getBoard().getspace(xpos, ypos).piece.Rookmove(xpos, ypos, game.getBoard(), selectedSpace);
+//        gameRepository.save(game);
+//    }  else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[B]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[b]")) {
+//        game.getBoard().getspace(xpos, ypos).piece.Bishopmove(xpos, ypos, game.getBoard(), selectedSpace);
+//        gameRepository.save(game);
+//   }else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[Q]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[q]")) {
+//           game.getBoard().getspace(xpos, ypos).piece.Queenmove(xpos, ypos, game.getBoard(), selectedSpace);
+//           gameRepository.save(game);
+//       }else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[K]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[k]")) {
+//           game.getBoard().getspace(xpos, ypos).piece.Kingmove(xpos, ypos, game.getBoard(), selectedSpace);
+//           gameRepository.save(game);
+//        }else if(game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[N]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[n]")) {
+//            game.getBoard().getspace(xpos, ypos).piece.Knightmove(xpos, ypos, game.getBoard(), selectedSpace);
+//            gameRepository.save(game);
+//        }else{
+//                    System.out.println("Error");
+//                }
+   }
 }

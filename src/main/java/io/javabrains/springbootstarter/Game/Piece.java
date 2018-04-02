@@ -6,6 +6,14 @@ import java.io.Serializable;
 @Entity
 
 public class Piece {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
@@ -67,26 +75,28 @@ public class Piece {
         isActive = active;
     }
 
-    public void Pawnmove(int xpos, int ypos, Board board, Space2 selected) {
+    public boolean Pawnmove(int xpos, int ypos, Board board, Space2 selected) {
         Space2 current = board.getspace(xpos, ypos);
-        if (selected.y == current.y + 1 && selected.x == current.x) {
-            this.setXpos(selected.x);
-            this.setYpos(selected.y);
-            selected.occupySpot(this);
-            current.piece = null;
+        if (selected.y == current.y + 1 && selected.x == current.x || (selected.y==current.y-1 && selected.x == current.x)) {
+//            this.setXpos(selected.x);
+//            this.setYpos(selected.y);
+//            selected.occupySpot(this);
+//            current.piece = null;
+            return true;
         } else if ((selected.y == current.y + 1 && selected.x == current.x + 1 || selected.x == current.x - 1) && selected.isOccupied()) {
 
-            this.setXpos(selected.x);
-            this.setXpos(selected.y);
-            selected.occupySpot(this);
-            current.piece = null;
+//            this.setXpos(selected.x);
+//            this.setXpos(selected.y);
+//            selected.occupySpot(this);
+//            current.piece = null;
+            return true;
 
         } else {
 
-
-            System.out.println("invalid Move");
+            return false;
+            //System.out.println("invalid Move");
         }
-        System.out.println("override error");
+        //System.out.println("override error");
     }
 
     public void Rookmove(int xpos, int ypos, Board board, Space2 selected) {
@@ -98,7 +108,8 @@ public class Piece {
                         System.out.println("Invalid Move");
                         break;
                     } else if (y == selected.y - 1) {
-                        current.piece = null;
+
+                        //current.piece = null;
                         selected.occupySpot(this);
 
                         this.setXpos(selected.x) ;
@@ -112,7 +123,7 @@ public class Piece {
                         System.out.println("Invalid Move");
                         break;
                     } else if (y == selected.y + 1) {
-                        current.piece = null;
+                       // current.piece = null;
                         selected.occupySpot(this);
 
                         this.setXpos(selected.x) ;
@@ -128,7 +139,7 @@ public class Piece {
                         System.out.println("Invalid Move");
                         break;
                     } else if (x == selected.x - 1) {
-                        current.piece = null;
+                        //current.piece = null;
                         selected.occupySpot(this);
 
                         this.setXpos(selected.x) ;
@@ -142,7 +153,7 @@ public class Piece {
                         System.out.println("Invalid Move");
                         break;
                     } else if (x == selected.x + 1) {
-                        current.piece = null;
+                        //current.piece = null;
                         selected.occupySpot(this);
                         //this.setSpace(board.getspace(selected.x, selected.y));
                         this.setXpos(selected.x) ;

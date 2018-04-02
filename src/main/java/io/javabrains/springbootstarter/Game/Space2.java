@@ -1,5 +1,7 @@
 package io.javabrains.springbootstarter.Game;
 
+import org.hibernate.annotations.OnDelete;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -22,8 +24,10 @@ public class Space2{
     @OneToOne(
             cascade = CascadeType.ALL,
             orphanRemoval = true
+
     )
-    
+    //@OnDelete(action = onDeleteAction.CASCADE)
+
     Piece piece;
 
     public int getId() {
