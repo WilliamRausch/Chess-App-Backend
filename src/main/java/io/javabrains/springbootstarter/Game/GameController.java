@@ -42,7 +42,7 @@ public class GameController {
 
     }
     @RequestMapping(method= RequestMethod.PUT, value="/Players/{playerId}/Games/{gameId}")
-    public void updateGame(@RequestBody Game game, @PathVariable String gameId, int playerId){
+    public void updateGame(@RequestBody Game game, @PathVariable String gameId, Integer playerId){
         game.setPlayer1(new Player(playerId, "")) ;
         gameService.updateGame(game);
 
@@ -54,7 +54,7 @@ public class GameController {
 
     }
     @RequestMapping(method= RequestMethod.PUT, value="/Players/{playerId}/Games/{gameId}/{currentSpace}/{selectedSpace}")
-    public void movePiece(@PathVariable int gameId, int playerId, @PathVariable String currentSpace, @PathVariable String selectedSpace){
+    public void movePiece(@PathVariable Integer gameId, @PathVariable Integer playerId, @PathVariable String currentSpace, @PathVariable String selectedSpace){
 
         System.out.println("SPACES");
         System.out.println(currentSpace+" "+ selectedSpace );
