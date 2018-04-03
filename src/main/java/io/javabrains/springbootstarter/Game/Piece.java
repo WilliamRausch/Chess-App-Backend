@@ -99,21 +99,21 @@ public class Piece {
         //System.out.println("override error");
     }
 
-    public void Rookmove(int xpos, int ypos, Board board, Space2 selected) {
+    public boolean Rookmove(int xpos, int ypos, Board board, Space2 selected) {
         Space2 current = board.getspace(xpos, ypos);
         if (selected.x == current.x) {
             if (selected.y > current.y) {
                 for (int y = current.y; y < selected.y; y++) {
                     if (board.getspace(selected.x, y).isOccupied() && y != current.y) {
-                        System.out.println("Invalid Move");
-                        break;
+                        return false;
                     } else if (y == selected.y - 1) {
 
                         //current.piece = null;
-                        selected.occupySpot(this);
-
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+//                        selected.occupySpot(this);
+//
+//                        this.setXpos(selected.x) ;
+//                        this.setYpos(selected.y) ;
+                        return true;
                     }
 
                 }
@@ -121,13 +121,11 @@ public class Piece {
                 for (int y = current.y; y > selected.y; y--) {
                     if (board.getspace(selected.x, y).isOccupied() && y != current.y) {
                         System.out.println("Invalid Move");
-                        break;
+                        return false;
+
                     } else if (y == selected.y + 1) {
                        // current.piece = null;
-                        selected.occupySpot(this);
-
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                        return true;
                     }
                 }
 
@@ -136,65 +134,63 @@ public class Piece {
             if (selected.x > current.x) {
                 for (int x = current.x; x < selected.x; x++) {
                     if (board.getspace(selected.x, x).isOccupied() && x != current.x) {
-                        System.out.println("Invalid Move");
-                        break;
+                        return false;
+                        //System.out.println("Invalid Move");
+                        //break;
                     } else if (x == selected.x - 1) {
+                        return true;
                         //current.piece = null;
-                        selected.occupySpot(this);
-
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+//                        selected.occupySpot(this);
+//
+//                        this.setXpos(selected.x) ;
+//                        this.setYpos(selected.y) ;
                     }
 
                 }
             } else if (selected.x < current.x) {
                 for (int x = current.x; x > selected.x; x--) {
                     if (board.getspace(selected.x, x).isOccupied() && x != current.x) {
-                        System.out.println("Invalid Move");
-                        break;
+                        return false;
+
                     } else if (x == selected.x + 1) {
-                        //current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y));
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                       return true;
                     }
                 }
 
             }
 
         } else {
-            System.out.println("invalid move");
+            return false;
+            //System.out.println("invalid move");
         }
+        return false;
     }
 
-    public void Queenmove(int xpos, int ypos, Board board, Space2 selected) {
+    public boolean Queenmove(int xpos, int ypos, Board board, Space2 selected) {
         Space2 current = board.getspace(xpos, ypos);
         if (selected.x == current.x) {
             if (selected.y > current.y) {
                 for (int y = current.y; y < selected.y; y++) {
                     if (board.getspace(selected.x, y).isOccupied() && y != current.y) {
-                        System.out.println("Invalid Move");
-                        break;
+                        return false;
+                        //System.out.println("Invalid Move");
+                        //break;
                     } else if (y == selected.y - 1) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                        return true;
+//                        current.piece = null;
+//                        selected.occupySpot(this);
+//                        this.setXpos(selected.x) ;
+//                        this.setYpos(selected.y) ;
                     }
 
                 }
             } else if (selected.y < current.y) {
                 for (int y = current.y; y > selected.y; y--) {
                     if (board.getspace(selected.x, y).isOccupied() && y != current.y) {
-                        System.out.println("Invalid Move");
-                        break;
+                        return false;
                     } else if (y == selected.y + 1) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y));
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                        return true;
+
                     }
                 }
 
@@ -203,28 +199,19 @@ public class Piece {
             if (selected.x > current.x) {
                 for (int x = current.x; x < selected.x; x++) {
                     if (board.getspace(selected.x, x).isOccupied() && x != current.x) {
-                        System.out.println("Invalid Move");
-                        break;
+                        return false;
+
                     } else if (x == selected.x - 1) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y));
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                       return true;
                     }
 
                 }
             } else if (selected.x < current.x) {
                 for (int x = current.x; x > selected.x; x--) {
                     if (board.getspace(selected.x, x).isOccupied() && x != current.x) {
-                        System.out.println("Invalid Move");
-                        break;
+                        return false;
                     } else if (x == selected.x + 1) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        // this.setSpace(board.getspace(selected.x, selected.y));
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                        return true;
                     }
                 }
 
@@ -234,163 +221,113 @@ public class Piece {
             if (current.x < selected.x && current.y < selected.y) {
                 for (int s = 0; s < Math.abs(current.x - selected.x); s++) {
                     if (board.getspace((current.x + s), (current.y + s)).isOccupied() && s != 0) {
-                        System.out.println("invalid move");
-                        break;
+                        return false;
+
                     } else if (s == (Math.abs(current.x - selected.x) - 1)) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                       return true;
                     }
                 }
             } else if (current.x > selected.x && current.y < selected.y) {
                 for (int s = 0; s < Math.abs(current.x - selected.x); s++) {
                     if (board.getspace((current.x - s), (current.y + s)).isOccupied() && s != 0) {
-                        System.out.println("invalid move");
-                        break;
+                        return false;
                     } else if (s == (Math.abs(current.x - selected.x) - 1)) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                       return true;
                     }
                 }
             } else if (current.x > selected.x && current.y > selected.y) {
                 for (int s = 0; s < Math.abs(current.x - selected.x); s++) {
                     if (board.getspace((current.x - s), (current.y - s)).isOccupied() && s != 0) {
-                        System.out.println("invalid move");
-                        break;
+                       return false;
                     } else if (s == (Math.abs(current.x - selected.x) - 1)) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                        return true;
                     }
                 }
             } else if (current.x < selected.x && current.y > selected.y) {
                 for (int s = 0; s < Math.abs(current.x - selected.x); s++) {
                     if (board.getspace((current.x + s), (current.y - s)).isOccupied() && s != 0) {
-                        System.out.println("invalid move");
-                        break;
+                        return false;
                     } else if (s == (Math.abs(current.x - selected.x) - 1)) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                      return true;
                     }
                 }
             }
 
 
         } else {
-            System.out.println("invalid move");
+            return false;
+
         }
+        return false;
     }
 
-    public void Bishopmove(int xpos, int ypos, Board board, Space2 selected) {
+    public boolean Bishopmove(int xpos, int ypos, Board board, Space2 selected) {
         Space2 current = board.getspace(xpos, ypos);
         if (Math.abs(current.x - selected.x) == Math.abs(current.y - selected.y)) {
             if (current.x < selected.x && current.y < selected.y) {
                 for (int s = 0; s < Math.abs(current.x - selected.x); s++) {
                     if (board.getspace((current.x + s), (current.y + s)).isOccupied() && s != 0) {
-                        System.out.println("invalid move");
-                        break;
+                       return false;
                     } else if (s == (Math.abs(current.x - selected.x) - 1)) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                      return true;
                     }
                 }
             } else if (current.x > selected.x && current.y < selected.y) {
                 for (int s = 0; s < Math.abs(current.x - selected.x); s++) {
                     if (board.getspace((current.x - s), (current.y + s)).isOccupied() && s != 0) {
-                        System.out.println("invalid move");
-                        break;
+                       return false;
                     } else if (s == (Math.abs(current.x - selected.x) - 1)) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                       return true;
                     }
                 }
             } else if (current.x > selected.x && current.y > selected.y) {
                 for (int s = 0; s < Math.abs(current.x - selected.x); s++) {
                     if (board.getspace((current.x - s), (current.y - s)).isOccupied() && s != 0) {
-                        System.out.println("invalid move");
-                        break;
+                       return false;
                     } else if (s == (Math.abs(current.x - selected.x) - 1)) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-                        //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                        return true;
+
                     }
                 }
             } else if (current.x < selected.x && current.y > selected.y) {
                 for (int s = 0; s < Math.abs(current.x - selected.x); s++) {
                     if (board.getspace((current.x + s), (current.y - s)).isOccupied() && s != 0) {
-                        System.out.println("invalid move");
-                        break;
+                        return false;
                     } else if (s == (Math.abs(current.x - selected.x) - 1)) {
-                        current.piece = null;
-                        selected.occupySpot(this);
-
-                        // this.setSpace(board.getspace(selected.x, selected.y) ) ;
-                        this.setXpos(selected.x) ;
-                        this.setYpos(selected.y) ;
+                        return true;
                     }
                 }
             }
 
 
         } else {
-            System.out.println("invalid move");
+            return false;
+
         }
+        return false;
+       // System.out.println("invalid Move");
     }
 
-    public void Knightmove(int xpos, int ypos, Board board, Space2 selected) {
+    public boolean Knightmove(int xpos, int ypos, Board board, Space2 selected) {
         Space2 current = board.getspace(xpos,ypos) ;
         if((selected.x==current.x+1&&selected.y==current.y+2)|| (selected.x==current.x-1&&selected.y==current.y+2)){
-            current.piece = null;
-            selected.occupySpot(this) ;
-            //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-            this.setXpos(selected.x);
-            this.setYpos(selected.y);
+          return true;
         }else if((selected.x==current.x+1&&selected.y==current.y-2)|| (selected.x==current.x-1&&selected.y==current.y-2)){
-            current.piece = null;
-            selected.occupySpot(this) ;
-            //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-            this.setXpos(selected.x) ;
-            this.setYpos(selected.y) ;
+            return true;
         }
         else{
-            System.out.println("Invalid Move");
+            return false;
         }
     }
-    public void Kingmove(int xpos, int ypos, Board board, Space2 selected){
+    public boolean Kingmove(int xpos, int ypos, Board board, Space2 selected){
         Space2 current = board.getspace(xpos, ypos) ;
         if((selected.y==current.y+1||selected.y==current.y-1)&&current.x==selected.x){
-            current.piece = null;
-            selected.occupySpot(this) ;
-            //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-            this.setXpos(selected.x);
-            this.setYpos(selected.y);
+            return true;
 
         }else if((selected.x==current.x+1||selected.y==current.x-1)&&current.y==selected.y){
-            current.piece = null;
-            selected.occupySpot(this) ;
-            //this.setSpace(board.getspace(selected.x, selected.y) ) ;
-            this.setXpos(selected.x);
-            this.setYpos(selected.y);
+         return true;
         }else{
-            System.out.println("invalid move");
+            return false;
         }
     }
     }

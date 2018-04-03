@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameService.java" afterPath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Piece.java" afterPath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Piece.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Space2.java" afterPath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Space2.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,12 +60,13 @@
       <file leaf-file-name="GameService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="110" column="16" lean-forward="false" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+            <state relative-caret-position="423">
+              <caret line="121" column="174" lean-forward="false" selection-start-line="121" selection-start-column="174" selection-end-line="121" selection-end-column="174" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3276#3277#0" expanded="true" />
-                <element signature="e#3317#3318#0" expanded="true" />
+                <element signature="e#3289#3290#0" expanded="true" />
+                <element signature="e#3368#3369#0" expanded="true" />
+                <element signature="e#3409#3410#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,10 +95,11 @@
       <file leaf-file-name="Piece.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Piece.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="2066">
+              <caret line="327" column="21" lean-forward="false" selection-start-line="327" selection-start-column="21" selection-end-line="327" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#158#159#0" expanded="true" />
                 <element signature="e#183#184#0" expanded="true" />
                 <element signature="e#216#217#0" expanded="true" />
                 <element signature="e#244#245#0" expanded="true" />
@@ -432,7 +433,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="102" width="1038" height="615" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884616" sideWeight="0.49598393" order="6" side_tool="false" content_ui="tabs" />
@@ -443,7 +443,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884616" sideWeight="0.57530123" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4019231" sideWeight="0.41566265" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4019231" sideWeight="0.41566265" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884616" sideWeight="0.47991967" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -476,7 +476,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Piece.java</url>
-          <line>377</line>
+          <line>322</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -897,10 +897,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="2066">
+          <caret line="327" column="21" lean-forward="false" selection-start-line="327" selection-start-column="21" selection-end-line="327" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
             <element signature="e#183#184#0" expanded="true" />
             <element signature="e#216#217#0" expanded="true" />
             <element signature="e#244#245#0" expanded="true" />
@@ -910,12 +911,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="110" column="16" lean-forward="false" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+        <state relative-caret-position="423">
+          <caret line="121" column="174" lean-forward="false" selection-start-line="121" selection-start-column="174" selection-end-line="121" selection-end-column="174" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3276#3277#0" expanded="true" />
-            <element signature="e#3317#3318#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3368#3369#0" expanded="true" />
+            <element signature="e#3409#3410#0" expanded="true" />
           </folding>
         </state>
       </provider>
