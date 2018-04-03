@@ -44,7 +44,7 @@ public class GameService {
     public void addGame(Game game) {
         int id = game.getId();
 
-        if(gameRepository.findOne(id) == null) {
+
 
             for (int i = 0; i < 8; i++) {
                 game.getBoard().getspace(i, 1).setPiece(new Piece(i, 1, "black", "[P]", true));
@@ -76,10 +76,7 @@ public class GameService {
             game.getBoard().getspace(4, 0).setPiece(new Piece(4, 0, "black", "[K]", true));
             game.getBoard().getspace(4, 7).setPiece(new Piece(4, 7, "white", "[k]", true));
             gameRepository.save(game);
-        }else{
-            System.out.println("ERROR");
-        }
-
+        
     }
 
     public void updateGame(Game game) {
