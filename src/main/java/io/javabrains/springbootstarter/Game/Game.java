@@ -46,8 +46,8 @@ public class Game {
         this.id = id;
         this.board = board;
 
-        this.player1 = new Player(player1Id, "");
-        this.player2 = new Player(player2Id, "");
+        this.player1 = new Player(player1Id, "", "");
+        this.player2 = new Player(player2Id, "", "");
 
     }
     public Player getPlayer1() {

@@ -37,4 +37,24 @@ public class PlayerService {
     public void deletePlayer(int id){
         playerRepository.delete(id);
     }
+    public Integer verifyLogin(Player player){
+        List<Player> players = new ArrayList<>();
+        playerRepository.findAll().forEach(players::add);
+        Player playerCheck = null;
+
+        for(int i=0; i<players.size(); i++){
+            if(player.getName().equalsIgnoreCase(players.get(i).getName())){
+                playerCheck = players.get(i);
+            }
+        }
+        //Player playerCheck = playerRepository.findOne(player.getId());
+        System.out.println(playerCheck.getName());
+        System.out.println(player.getName());
+        if (playerCheck.getName().equalsIgnoreCase( player.getName()) && playerCheck.getPassword().equalsIgnoreCase(player.getPassword())){
+            return playerCheck.getId();
+        }
+        else{
+            return -1;
+        }
+    }
 }

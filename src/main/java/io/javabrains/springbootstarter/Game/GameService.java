@@ -76,7 +76,7 @@ public class GameService {
             game.getBoard().getspace(4, 0).setPiece(new Piece(4, 0, "black", "[K]", true));
             game.getBoard().getspace(4, 7).setPiece(new Piece(4, 7, "white", "[k]", true));
             gameRepository.save(game);
-        
+
     }
 
     public void updateGame(Game game) {

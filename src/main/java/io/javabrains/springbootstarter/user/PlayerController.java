@@ -34,4 +34,8 @@ public class PlayerController {
         playerService.deletePlayer(id);
 
     }
+    @RequestMapping(method = RequestMethod.POST, value= "/login")
+    public Integer verifyLogin(@RequestBody Player player){
+       return playerService.verifyLogin(player);
+    }
 }
