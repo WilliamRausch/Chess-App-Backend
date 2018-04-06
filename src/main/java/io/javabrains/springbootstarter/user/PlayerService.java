@@ -40,7 +40,7 @@ public class PlayerService {
     public Integer verifyLogin(Player player){
         List<Player> players = new ArrayList<>();
         playerRepository.findAll().forEach(players::add);
-        Player playerCheck = null;
+        Player playerCheck = new Player(-1,"SHDHHSA","HSDNAJKNJDNJKANS");
 
         for(int i=0; i<players.size(); i++){
             if(player.getName().equalsIgnoreCase(players.get(i).getName())){
