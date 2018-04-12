@@ -34,13 +34,22 @@ public class PlayerService {
     public void updatePlayer(Player player, int id){
       playerRepository.save(player) ;
     }
+    public void gameOver(int winnerId, int loserId){
+        Player winner = playerRepository.findOne(winnerId);
+        Player loser = playerRepository.findOne(loserId);
+        winner.setWins(winner.getWins()+1) ;
+        loser.setLosses(loser.getLosses()+1) ;
+        playerRepository.save(winner);
+        playerRepository.save(loser);
+
+    }
     public void deletePlayer(int id){
         playerRepository.delete(id);
     }
     public Integer verifyLogin(Player player){
         List<Player> players = new ArrayList<>();
         playerRepository.findAll().forEach(players::add);
-        Player playerCheck = new Player(-1,"SHDHHSA","HSDNAJKNJDNJKANS");
+        Player playerCheck = new Player(-1,"SHDHHSA","HSDNAJKNJDNJKANS", -5, -5);
 
         for(int i=0; i<players.size(); i++){
             if(player.getName().equalsIgnoreCase(players.get(i).getName())){

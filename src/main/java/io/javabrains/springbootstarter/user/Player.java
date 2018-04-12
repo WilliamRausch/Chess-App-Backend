@@ -13,6 +13,26 @@ public class Player {
 
     private String name;
 
+    public int getWins() {
+        return wins;
+    }
+
+    public void setWins(int wins) {
+        this.wins = wins;
+    }
+
+    public int getLosses() {
+        return losses;
+    }
+
+    public void setLosses(int losses) {
+        this.losses = losses;
+    }
+
+    private int wins;
+
+    private int losses;
+
     public String getPassword() {
         return password;
     }
@@ -27,10 +47,12 @@ public class Player {
 
     }
 
-    public Player( int id, String name, String password) {
+    public Player( int id, String name, String password, int wins, int losses) {
         this.id = id;
         this.name = name;
         this.password = password;
+        this.wins = wins;
+        this.losses = losses;
 
     }
 

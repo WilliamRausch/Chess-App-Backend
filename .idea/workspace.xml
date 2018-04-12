@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="591f099e-e5d7-49db-a701-ef8a8a8caad6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Game.java" afterPath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameController.java" afterPath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/Player.java" afterPath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerController.java" afterPath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerService.java" afterPath="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,11 +23,11 @@
       <file leaf-file-name="PlayerService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="42" column="70" lean-forward="false" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
+            <state relative-caret-position="186">
+              <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding>
-                <element signature="e#1115#1116#0" expanded="true" />
-                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1462#1463#0" expanded="true" />
+                <element signature="e#1505#1506#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,8 +46,8 @@
       <file leaf-file-name="GameController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="45" column="50" lean-forward="false" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+            <state relative-caret-position="405">
+              <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#532#533#0" expanded="true" />
@@ -57,8 +62,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="48" column="50" lean-forward="false" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+            <state relative-caret-position="-54">
+              <caret line="49" column="55" lean-forward="false" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,7 +74,7 @@
       <file leaf-file-name="GameService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-149">
+            <state relative-caret-position="-65">
               <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -110,8 +115,8 @@
       <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="37" column="46" lean-forward="false" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+            <state relative-caret-position="169">
+              <caret line="43" column="50" lean-forward="false" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
               <folding>
                 <element signature="e#1225#1226#0" expanded="true" />
                 <element signature="e#1280#1281#0" expanded="true" />
@@ -123,12 +128,21 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="-171">
+              <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding>
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#439#440#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
                 <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#549#550#0" expanded="true" />
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#787#788#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,10 +208,10 @@
         <option value="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Space2.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Piece.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerService.java" />
       </list>
     </option>
@@ -455,7 +469,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="102" width="1038" height="615" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884616" sideWeight="0.49598393" order="6" side_tool="false" content_ui="tabs" />
@@ -866,29 +879,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="37" column="46" lean-forward="false" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        <state relative-caret-position="-65">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding>
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3426#3427#0" expanded="true" />
+            <element signature="e#3505#3506#0" expanded="true" />
+            <element signature="e#3546#3547#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="45" column="50" lean-forward="false" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+        <state relative-caret-position="405">
+          <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
@@ -901,46 +908,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="48" column="50" lean-forward="false" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+        <state relative-caret-position="-54">
+          <caret line="49" column="55" lean-forward="false" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/Game/GameService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3426#3427#0" expanded="true" />
-            <element signature="e#3505#3506#0" expanded="true" />
-            <element signature="e#3546#3547#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="-171">
+          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding>
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
             <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="43" column="50" lean-forward="false" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+          <folding>
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/javabrains/springbootstarter/user/PlayerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="42" column="70" lean-forward="false" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
+        <state relative-caret-position="186">
+          <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding>
-            <element signature="e#1115#1116#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1462#1463#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
           </folding>
         </state>
       </provider>

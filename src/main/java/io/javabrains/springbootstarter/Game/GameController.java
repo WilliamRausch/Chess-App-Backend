@@ -24,8 +24,8 @@ public class GameController {
     }
     @RequestMapping(method= RequestMethod.POST, value="/Players/{player1Id}/Games/{player2Id}")
     public void addGame(@RequestBody Game game, @PathVariable int player1Id, @PathVariable int player2Id){
-        game.setPlayer1(new Player(player1Id, "", "")) ;
-        game.setPlayer2(new Player(player2Id, "", "")) ;
+        game.setPlayer1(new Player(player1Id, "", "",0,0));
+        game.setPlayer2(new Player(player2Id, "", "",0,0)) ;
         List<Space2> spots = new ArrayList<>();
         //spots.add(new Space2(2,2));
         Board board = new Board(spots);
@@ -43,7 +43,7 @@ public class GameController {
     }
     @RequestMapping(method= RequestMethod.PUT, value="/Players/{playerId}/Games/{gameId}")
     public void updateGame(@RequestBody Game game, @PathVariable String gameId, Integer playerId){
-        game.setPlayer1(new Player(playerId, "", "")) ;
+        game.setPlayer1(new Player(playerId, "", "",0,0)) ;
         gameService.updateGame(game);
 
     }
@@ -62,4 +62,5 @@ public class GameController {
         gameService.movePiece(game, currentSpace, selectedSpace);
 
     }
+
 }

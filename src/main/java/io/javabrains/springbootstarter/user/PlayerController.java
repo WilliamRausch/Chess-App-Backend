@@ -38,4 +38,9 @@ public class PlayerController {
     public Integer verifyLogin(@RequestBody Player player){
        return playerService.verifyLogin(player);
     }
+
+    @RequestMapping(method = RequestMethod.PUT, value="/Players/{winnerId}/{loserId}")
+        public void gameOver(@PathVariable int winnerId, @PathVariable int loserId){
+        playerService.gameOver(winnerId, loserId);
+    }
 }
