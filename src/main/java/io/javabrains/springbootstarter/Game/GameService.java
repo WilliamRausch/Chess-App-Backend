@@ -88,6 +88,7 @@ public class GameService {
     }
 
     public void movePiece(Game game, String current, String selected) {
+
         //getting the current x and y positions
         char cxpos = current.charAt(0);
         int xpos = Character.getNumericValue(cxpos);
@@ -109,6 +110,7 @@ public class GameService {
         if (game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[P]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[p]")) {
             System.out.println("MOVING PAWN");
             if (game.getBoard().getspace(xpos, ypos).piece.Pawnmove(xpos, ypos, game.getBoard(), selectedSpace)) {
+                game.setMoves(game.getMoves()+1) ;
                 piece.setXpos(sxpos);
                 piece.setYpos(sypos);
                 game.getBoard().getspace(xpos, ypos).setPiece(null);
@@ -125,6 +127,7 @@ public class GameService {
         } else if (game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[R]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[r]")) {
             System.out.println("MOVING ROOK");
             if (game.getBoard().getspace(xpos, ypos).piece.Rookmove(xpos, ypos, game.getBoard(), selectedSpace)) {
+                game.setMoves(game.getMoves()+1) ;
                 piece.setXpos(sxpos);
                 piece.setYpos(sypos);
                 game.getBoard().getspace(xpos, ypos).setPiece(null);
@@ -137,6 +140,7 @@ public class GameService {
             } else if (game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[N]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[n]")) {
                 System.out.println("MOVING Knight");
                 if (game.getBoard().getspace(xpos, ypos).piece.Knightmove(xpos, ypos, game.getBoard(), selectedSpace)) {
+                    game.setMoves(game.getMoves()+1) ;
                     piece.setXpos(sxpos);
                     piece.setYpos(sypos);
                     game.getBoard().getspace(xpos, ypos).setPiece(null);
@@ -154,6 +158,7 @@ public class GameService {
             } else if (game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[B]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[b]")) {
                 System.out.println("MOVING Bishop");
                 if (game.getBoard().getspace(xpos, ypos).piece.Bishopmove(xpos, ypos, game.getBoard(), selectedSpace)) {
+                    game.setMoves(game.getMoves()+1) ;
                     piece.setXpos(sxpos);
                     piece.setYpos(sypos);
                     game.getBoard().getspace(xpos, ypos).setPiece(null);
@@ -167,6 +172,7 @@ public class GameService {
                 } else if (game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[Q]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[q]")) {
                     System.out.println("MOVING QUEEN");
                     if (game.getBoard().getspace(xpos, ypos).piece.Queenmove(xpos, ypos, game.getBoard(), selectedSpace)) {
+                        game.setMoves(game.getMoves()+1) ;
                         piece.setXpos(sxpos);
                         piece.setYpos(sypos);
                         game.getBoard().getspace(xpos, ypos).setPiece(null);
@@ -180,6 +186,7 @@ public class GameService {
                     } else if (game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[K]") || game.getBoard().getspace(xpos, ypos).piece.charSymbol.equalsIgnoreCase("[k]")) {
                         System.out.println("MOVING KING");
                         if (game.getBoard().getspace(xpos, ypos).piece.Kingmove(xpos, ypos, game.getBoard(), selectedSpace)) {
+                            game.setMoves(game.getMoves()+1) ;
                             piece.setXpos(sxpos);
                             piece.setYpos(sypos);
                             game.getBoard().getspace(xpos, ypos).setPiece(null);

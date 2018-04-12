@@ -30,6 +30,7 @@ public class GameController {
         //spots.add(new Space2(2,2));
         Board board = new Board(spots);
         game.setBoard(board);
+        game.setMoves(0);
          //ArrayList<testObj2>[][] testObj2Array = new ArrayList<testObj2>[1][1] ;
 
 

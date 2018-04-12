@@ -33,6 +33,16 @@ public class Game {
 
     private Board board;
 
+    public int getMoves() {
+        return moves;
+    }
+
+    public void setMoves(int moves) {
+        this.moves = moves;
+    }
+
+    private int moves;
+
 
 
 
@@ -41,8 +51,9 @@ public class Game {
 
     }
 
-    public Game(int id, int player1Id, int player2Id,  Board board) {
+    public Game(int id, int player1Id, int player2Id,  Board board, int moves) {
 
+        this.moves = moves;
         this.id = id;
         this.board = board;
 
